@@ -54,45 +54,7 @@ export default function VideoHero() {
       {/* Content */}
       <div className="relative z-10 h-full flex items-center justify-center text-center">
         <div className="max-w-4xl mx-auto px-4">
-          <motion.h1
-            className="text-5xl md:text-7xl font-bold text-white mb-6 tracking-tight"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-          >
-            Illuminate Your
-            <span className="block text-purple-300">Wellness Journey</span>
-          </motion.h1>
-          
-          <motion.p
-            className="text-xl md:text-2xl text-white/90 mb-8 font-light max-w-2xl mx-auto leading-relaxed"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-          >
-            Discover our handcrafted candles and mindful apparel designed to elevate your everyday moments
-          </motion.p>
-
-          <motion.div
-            className="flex flex-col sm:flex-row gap-4 justify-center items-center"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-          >
-            <Button 
-              size="lg" 
-              className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 rounded-full font-medium transition-all duration-300 transform hover:scale-105"
-            >
-              Shop Candles
-            </Button>
-            <Button 
-              variant="outline" 
-              size="lg"
-              className="border-white text-white hover:bg-white hover:text-purple-600 px-8 py-3 rounded-full font-medium transition-all duration-300"
-            >
-              Explore Collection
-            </Button>
-          </motion.div>
+          {/* Simplified hero content - just video background */}
         </div>
       </div>
 
