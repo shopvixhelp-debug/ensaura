@@ -117,8 +117,8 @@ export default function AdminDashboard() {
           transition={{ duration: 0.6 }}
         >
           <div className="mb-8">
-            <h1 className="text-3xl font-bold text-gray-900 mb-2">Admin Dashboard</h1>
-            <p className="text-gray-600">Manage your Ensaura store</p>
+            <h1 className="text-3xl font-display font-medium text-gray-900 mb-2">Admin Dashboard</h1>
+            <p className="text-gray-600 font-light">Manage your Ensaura store</p>
           </div>
 
           <Tabs value={activeTab} onValueChange={setActiveTab} className="space-y-6">
@@ -143,11 +143,11 @@ export default function AdminDashboard() {
                       <CardContent className="p-6">
                         <div className="flex items-center justify-between">
                           <div>
-                            <p className="text-sm font-medium text-gray-600">{stat.title}</p>
-                            <p className="text-2xl font-bold text-gray-900">{stat.value}</p>
+                            <p className="text-sm font-medium text-gray-600 font-body">{stat.title}</p>
+                            <p className="text-2xl font-display font-medium text-gray-900">{stat.value}</p>
                             <p className="text-sm text-green-600">{stat.change}</p>
                           </div>
-                          <div className="p-3 bg-purple-100 rounded-full text-purple-600">
+                          <div className="p-3 bg-rose-quartz-100 rounded-full text-rose-quartz-600">
                             {stat.icon}
                           </div>
                         </div>
@@ -160,18 +160,18 @@ export default function AdminDashboard() {
               {/* Recent Orders */}
               <Card>
                 <CardHeader>
-                  <CardTitle>Recent Orders</CardTitle>
+                  <CardTitle className="font-display font-medium">Recent Orders</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <div className="space-y-4">
                     {recentOrders.map((order) => (
                       <div key={order.id} className="flex items-center justify-between p-4 bg-gray-50 rounded-lg">
                         <div>
-                          <p className="font-medium text-gray-900">{order.id}</p>
-                          <p className="text-sm text-gray-600">{order.customer}</p>
+                          <p className="font-medium text-gray-900 font-body">{order.id}</p>
+                          <p className="text-sm text-gray-600 font-light">{order.customer}</p>
                         </div>
                         <div className="text-right">
-                          <p className="font-medium text-gray-900">${order.total}</p>
+                          <p className="font-medium text-gray-900 font-body">${order.total}</p>
                           <Badge className={getStatusColor(order.status)}>
                             {order.status}
                           </Badge>
@@ -185,7 +185,7 @@ export default function AdminDashboard() {
 
             <TabsContent value="orders" className="space-y-6">
               <div className="flex justify-between items-center">
-                <h2 className="text-2xl font-bold text-gray-900">Orders</h2>
+                <h2 className="text-2xl font-display font-medium text-gray-900">Orders</h2>
                 <Button>
                   <Plus className="h-4 w-4 mr-2" />
                   Export Orders
@@ -259,7 +259,7 @@ export default function AdminDashboard() {
 
             <TabsContent value="products" className="space-y-6">
               <div className="flex justify-between items-center">
-                <h2 className="text-2xl font-bold text-gray-900">Products</h2>
+                <h2 className="text-2xl font-display font-medium text-gray-900">Products</h2>
                 <Button>
                   <Plus className="h-4 w-4 mr-2" />
                   Add Product
@@ -336,7 +336,7 @@ export default function AdminDashboard() {
 
             <TabsContent value="customers" className="space-y-6">
               <div className="flex justify-between items-center">
-                <h2 className="text-2xl font-bold text-gray-900">Customers</h2>
+                <h2 className="text-2xl font-display font-medium text-gray-900">Customers</h2>
                 <Button>
                   <Plus className="h-4 w-4 mr-2" />
                   Export List
@@ -345,7 +345,7 @@ export default function AdminDashboard() {
 
               <Card>
                 <CardContent className="p-6">
-                  <p className="text-gray-600">Customer management interface coming soon...</p>
+                  <p className="text-gray-600 font-light">Customer management interface coming soon...</p>
                 </CardContent>
               </Card>
             </TabsContent>
